@@ -1,0 +1,17 @@
+* {
+	font-size:26px;
+	font-family: 'Times New Roman'; 
+	box-sizing: border-box;
+	text-align: center;
+}
+
+table td {
+	width: 175px;
+	height: 75px;
+	padding: 5px;
+}
+
+table td[colspan = "3"] {
+	cursor:pointer;
+	background-color:rgb(212, 209, 209);
+}
