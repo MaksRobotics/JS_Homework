@@ -1,64 +1,70 @@
 // ДОМАШНЕЕ ЗАДАНИЕ 9
 
-// ЗАДАНИЕ 1
+// ЗАДАНИЕ 1 (подредактировал)
 
-var numbersArr = [-1, 0, 2, 34, -2],
-    positiveArr = [];
+var numbersArr = [-1, 0, 2, 34, -2];
 
-positiveArr = numbersArr.filter(function(item) {
-    return item > 0;
-});
+function filterNumbersArr(numbers) {
+	var positiveArr = [];
+	
+	positiveArr = numbers.filter(function(item) {
+		return item > 0;
+	});
+	
+	return positiveArr;
+}	
 
-console.log(positiveArr);
+console.log(filterNumbersArr(numbersArr));
 
-// ЗАДАНИЕ 2
+// ЗАДАНИЕ 2 (подредактировал)
 
-var numbersArray = [-1, 0, 2, 34, -2];
+var numbersArr = [-1, 0, 22, 34, -2];
 
-var firstPositiveNum = numbersArray.find(function(item) {
-    return item > 0;
-});
+function firstPositiveNumber(numbers) {
+	var firstPositiveNum;
+	
+	firstPositiveNum = numbers.find(function(item) {
+		return item >0;
+	});
+	
+	return firstPositiveNum;
+}	
 
-console.log(firstPositiveNum);
+console.log(firstPositiveNumber(numbersArr));
 
-// ЗАДАНИЕ 3
+// ЗАДАНИЕ 3 (подредактировал)
 
 str = 'шаЛаШ';
 
 function isPalindrome(str) {
-    var lowerStr = str.toLowerCase();
-    var reverseStr = lowerStr.split('').reverse().join(''); 
-    return lowerStr === reverseStr;
+
+    return str.toLowerCase() === str.toLowerCase().split('').reverse().join(''); 
 }
 
 console.log(isPalindrome(str));
 
-// ЗАДАНИЕ 4
+// ЗАДАНИЕ 4 (подредактировал)
 
-var strAnagrams1 = 'Кот',
-    strAnagrams2 = 'Отк';
+var str1 = 'Кот', str2 = 'ОТК';
 
-function areAnagrams(str1, str2) {
-    var strLower1 = str1.toLowerCase(),
-        strLower2 = str2.toLowerCase(),
-        campareArr = [];
+function anagramFunction(str1, str2) {
 
-    if (strLower1.length ===  strLower2.length) {
+    if (str1.length ===  str2.length) {
+        var strForCampare1 = str1.toLowerCase().split('').sort().join(''),
+            strForCampare2 = str2.toLowerCase().split('').sort().join('');
 
-        for (var i = 0; i < strLower2.length; i++) {
-            var index = strLower1.indexOf(strLower2[i]);
-
-        if (index != (-1))
-            campareArr[index] = strLower1[index];
+        for (var i = 0; i < strForCampare1.length; i++) {
+            if (strForCampare1[i] != strForCampare2[i]) {
+                return false;
+            }
         }
-
-        return strLower1 === campareArr.join(''); 
+        return true;
     } else {
         return false;
-    }
+    } 
 }
 
-console.log(areAnagrams(strAnagrams1, strAnagrams2));
+console.log(anagramFunction(str1, str2));
 
 // ЗАДАНИЕ 5
 
