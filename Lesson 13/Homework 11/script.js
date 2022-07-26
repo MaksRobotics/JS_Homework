@@ -17,21 +17,22 @@ tableBody.addEventListener('click', function cellEdeting(event) {
         return;
     }
 
-		input.value = target.innerHTML;
-		target.innerHTML = '';
-		target.appendChild(input);
-		target.querySelector('input').focus();
+	input.value = target.innerHTML;
+	target.innerHTML = '';
+	target.appendChild(input);
+	target.querySelector('input').focus();
 		
-		var self = target;
+	var self = target;
 		
     input.addEventListener('blur', function() {
-		    self.innerHTML = this.value;
-		});
+		self.innerHTML = this.value;
+	});
 });
 
 document.addEventListener('keydown', function(event) {
     var keyBoard = event.key;
-	  if (keyBoard == 'Enter') {
-		    document.activeElement.blur();
-  }
+    
+	if (keyBoard == 'Enter') {
+		document.activeElement.blur();
+    }
 });

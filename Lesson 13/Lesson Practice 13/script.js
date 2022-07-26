@@ -12,21 +12,15 @@ var buttons = document.getElementsByTagName('button'),
 	buttonFirst = buttons[0];
 	
 buttonFirst.onclick = function() {
-	var firstParLInks = firstPar.children;
-	
-	for(item of firstParLInks) {
-		item.classList.add("classForLinks");
+	for (var i = 0; i < firstPar.children.length; i++) {
+		firstPar.children[i].classList.add('classForLinks');
 	}
 };
 
-var secondParLinks = secondPar.children;
-
-secondParLinks[0].addEventListener('click', function(event) {
+secondPar.addEventListener('click', function(event) {
 	event.preventDefault();
-	alert(this.href);
-})
 
-secondParLinks[1].addEventListener('click', function(event) {
-	event.preventDefault();
-	alert(this.href);
+	if (event.target.tagName == 'A') {
+		alert(event.target.href);
+	}
 })
