@@ -1,0 +1,62 @@
+* {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+form div{
+	margin-top: 3px;
+	padding: 5px; 
+}
+
+label {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+input[type="text"] {
+  border-width: 0;
+  outline: none;
+  margin: 0;
+  padding: 5px 5px;
+  background: #e6e6e6;
+}
+
+input[type="text"]:focus {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+
+button {
+	margin-top: 5px;
+	padding: 7px 0;
+	border-width: 0;
+	width: 100px;
+	background: #60e6c5;
+	color: white;
+	font-size: 14px;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+button[disabled="disabled"] {
+	background: red;
+}
+
+table {
+	margin-top: 10px;
+}
+
+.cell {
+    height: 30px;
+    width: 30px;
+    border: 1.5px solid grey;
+    border-style: inset;
+}
+ 
+.blackcell {
+    background-color: black;
+}
+ 
+.whitecell {
+    background-color: white;
+}
