@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+	font-family: 'Alegreya', serif;;
+	font-size: 18px;
+	font-weight: 400;
+	box-sizing: border-box;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+}
+
+.wrapper {
+	position: relative;
+	max-width: 1000px;
+	margin: 15px auto 5px;
+}
+
+button {
+	position: absolute;
+	right: -130px;
+	top: 0;
+	padding: 5px 0;
+	border-width: 0;
+	width: 120px;
+	background: #60e6c5;
+	font-size: 14px;
+	outline: none;
+	cursor: pointer;
+}
+
+button[disabled="disabled"] {
+	background: red;
+}
+
+.errorMessage {
+	margin: 0 auto;
+	width: 500px;
+	color: red;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.tabs {
+	width: 100%;
+}
+
+.tabs__items {
+	display: flex;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 600;
+	margin: 10px 0 0 0;	
+	white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #e3f2fdf8;
+    box-shadow: 0 2px 4px 0 #e3f2fd;
+}
+
+.tabs__item {
+	flex: 0 1 33.3%;
+	height: 30px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #1b6cbd91;
+}
+
+.tabs__item:hover {
+	background-color: rgb(227 242 253 / 35%);
+}
+
+.tabs__block {
+	padding: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	background-color: rgb(227 242 253 / 70%);
+	display: none;
+}
+
+.tabs__body .active, .tabs__block:target   {
+	display: block;
+}
+
+.tabs__block-inline {
+	display: inline-block;
+	padding: 0 20px 0 10px;
+	background-color: rgb(227 242 253 / 70%);
+	vertical-align: middle;
+}
+
+.tabs__block-inline p {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(227 242 253 / 70%);
+}
+
+.tabs__items .active, .tabs__items .active:hover {
+	background-color: rgb(227 242 253 / 70%);
+}
